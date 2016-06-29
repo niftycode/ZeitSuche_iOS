@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB0DFFCE1D20385400DC5970 /* ArticleDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0DFFCD1D20385400DC5970 /* ArticleDate.swift */; };
+		CB57F8DA1D1A8ECD00C094F1 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB57F8D91D1A8ECD00C094F1 /* SearchResult.swift */; };
+		CB75FD171D1C233A00AFD4B2 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB75FD161D1C233A00AFD4B2 /* LoadingCell.xib */; };
+		CB75FD191D1C347700AFD4B2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB75FD181D1C347700AFD4B2 /* DetailViewController.swift */; };
+		CBA12FB81D1AC14F0010F7B8 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA12FB71D1AC14F0010F7B8 /* SearchResultCell.xib */; };
+		CBA12FBA1D1AC80C0010F7B8 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA12FB91D1AC80C0010F7B8 /* SearchResultCell.swift */; };
+		CBA12FBC1D1ACA990010F7B8 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA12FBB1D1ACA990010F7B8 /* NothingFoundCell.xib */; };
+		CBC1915F1D0AF1A6002D2878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1915E1D0AF1A6002D2878 /* AppDelegate.swift */; };
+		CBC191611D0AF1A6002D2878 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC191601D0AF1A6002D2878 /* SearchViewController.swift */; };
+		CBC191641D0AF1A6002D2878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC191621D0AF1A6002D2878 /* Main.storyboard */; };
+		CBC191661D0AF1A6002D2878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC191651D0AF1A6002D2878 /* Assets.xcassets */; };
+		CBC191691D0AF1A6002D2878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC191671D0AF1A6002D2878 /* LaunchScreen.storyboard */; };
+		CBC191741D0AF1A6002D2878 /* ZeitSucheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC191731D0AF1A6002D2878 /* ZeitSucheTests.swift */; };
+		CBC1917F1D0AF1A6002D2878 /* ZeitSucheUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1917E1D0AF1A6002D2878 /* ZeitSucheUITests.swift */; };
+		CBC29B1E1D1ED4050039157E /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC29B1D1D1ED4050039157E /* ArticleViewController.swift */; };
+		CBE198E01D1D59FF00EFAFDB /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE198DF1D1D59FF00EFAFDB /* DimmingPresentationController.swift */; };
+		CBEF39CC1D1BD438007851E9 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF39CB1D1BD438007851E9 /* Connection.swift */; };
+		CBF000A21D2175DD0039A434 /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF000A11D2175DD0039A434 /* MyLabel.swift */; };
+		CBF000A41D2175F20039A434 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF000A31D2175F20039A434 /* MyButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBC191701D0AF1A6002D2878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBC191531D0AF1A6002D2878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBC1915A1D0AF1A6002D2878;
+			remoteInfo = ZeitSuche;
+		};
+		CBC1917B1D0AF1A6002D2878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBC191531D0AF1A6002D2878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBC1915A1D0AF1A6002D2878;
+			remoteInfo = ZeitSuche;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB0DFFCD1D20385400DC5970 /* ArticleDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDate.swift; sourceTree = "<group>"; };
+		CB57F8D91D1A8ECD00C094F1 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		CB75FD161D1C233A00AFD4B2 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		CB75FD181D1C347700AFD4B2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CBA12FB71D1AC14F0010F7B8 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		CBA12FB91D1AC80C0010F7B8 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		CBA12FBB1D1ACA990010F7B8 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		CBC1915B1D0AF1A6002D2878 /* ZeitSuche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeitSuche.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC1915E1D0AF1A6002D2878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBC191601D0AF1A6002D2878 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CBC191631D0AF1A6002D2878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBC191651D0AF1A6002D2878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBC191681D0AF1A6002D2878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBC1916A1D0AF1A6002D2878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC1916F1D0AF1A6002D2878 /* ZeitSucheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeitSucheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC191731D0AF1A6002D2878 /* ZeitSucheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeitSucheTests.swift; sourceTree = "<group>"; };
+		CBC191751D0AF1A6002D2878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC1917A1D0AF1A6002D2878 /* ZeitSucheUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeitSucheUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC1917E1D0AF1A6002D2878 /* ZeitSucheUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeitSucheUITests.swift; sourceTree = "<group>"; };
+		CBC191801D0AF1A6002D2878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC29B1D1D1ED4050039157E /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		CBE198DF1D1D59FF00EFAFDB /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		CBEF39CB1D1BD438007851E9 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		CBF000A11D2175DD0039A434 /* MyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
+		CBF000A31D2175F20039A434 /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBC191581D0AF1A6002D2878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC1916C1D0AF1A6002D2878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC191771D0AF1A6002D2878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBA3CC841D23BBE20038AFC1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CBC191671D0AF1A6002D2878 /* LaunchScreen.storyboard */,
+				CBC191621D0AF1A6002D2878 /* Main.storyboard */,
+				CB75FD161D1C233A00AFD4B2 /* LoadingCell.xib */,
+				CBA12FBB1D1ACA990010F7B8 /* NothingFoundCell.xib */,
+				CBA12FB71D1AC14F0010F7B8 /* SearchResultCell.xib */,
+				CBA12FB91D1AC80C0010F7B8 /* SearchResultCell.swift */,
+				CBF000A31D2175F20039A434 /* MyButton.swift */,
+				CBF000A11D2175DD0039A434 /* MyLabel.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		CBA3CC851D23BC170038AFC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB57F8D91D1A8ECD00C094F1 /* SearchResult.swift */,
+				CBEF39CB1D1BD438007851E9 /* Connection.swift */,
+				CB0DFFCD1D20385400DC5970 /* ArticleDate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CBA3CC861D23BC2F0038AFC1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBC1915E1D0AF1A6002D2878 /* AppDelegate.swift */,
+				CBE198DF1D1D59FF00EFAFDB /* DimmingPresentationController.swift */,
+				CBC1916A1D0AF1A6002D2878 /* Info.plist */,
+				CBC191651D0AF1A6002D2878 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBA3CC871D23BC4B0038AFC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBC191601D0AF1A6002D2878 /* SearchViewController.swift */,
+				CB75FD181D1C347700AFD4B2 /* DetailViewController.swift */,
+				CBC29B1D1D1ED4050039157E /* ArticleViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CBC191521D0AF1A6002D2878 = {
+			isa = PBXGroup;
+			children = (
+				CBC1915D1D0AF1A6002D2878 /* ZeitSuche */,
+				CBC191721D0AF1A6002D2878 /* ZeitSucheTests */,
+				CBC1917D1D0AF1A6002D2878 /* ZeitSucheUITests */,
+				CBC1915C1D0AF1A6002D2878 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBC1915C1D0AF1A6002D2878 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBC1915B1D0AF1A6002D2878 /* ZeitSuche.app */,
+				CBC1916F1D0AF1A6002D2878 /* ZeitSucheTests.xctest */,
+				CBC1917A1D0AF1A6002D2878 /* ZeitSucheUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBC1915D1D0AF1A6002D2878 /* ZeitSuche */ = {
+			isa = PBXGroup;
+			children = (
+				CBA3CC871D23BC4B0038AFC1 /* Controller */,
+				CBA3CC861D23BC2F0038AFC1 /* Supporting Files */,
+				CBA3CC851D23BC170038AFC1 /* Model */,
+				CBA3CC841D23BBE20038AFC1 /* UI */,
+			);
+			path = ZeitSuche;
+			sourceTree = "<group>";
+		};
+		CBC191721D0AF1A6002D2878 /* ZeitSucheTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBC191731D0AF1A6002D2878 /* ZeitSucheTests.swift */,
+				CBC191751D0AF1A6002D2878 /* Info.plist */,
+			);
+			path = ZeitSucheTests;
+			sourceTree = "<group>";
+		};
+		CBC1917D1D0AF1A6002D2878 /* ZeitSucheUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBC1917E1D0AF1A6002D2878 /* ZeitSucheUITests.swift */,
+				CBC191801D0AF1A6002D2878 /* Info.plist */,
+			);
+			path = ZeitSucheUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBC1915A1D0AF1A6002D2878 /* ZeitSuche */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC191831D0AF1A6002D2878 /* Build configuration list for PBXNativeTarget "ZeitSuche" */;
+			buildPhases = (
+				CBC191571D0AF1A6002D2878 /* Sources */,
+				CBC191581D0AF1A6002D2878 /* Frameworks */,
+				CBC191591D0AF1A6002D2878 /* Resources */,
+				CB57F8D81D1A847100C094F1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeitSuche;
+			productName = ZeitSuche;
+			productReference = CBC1915B1D0AF1A6002D2878 /* ZeitSuche.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBC1916E1D0AF1A6002D2878 /* ZeitSucheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC191861D0AF1A6002D2878 /* Build configuration list for PBXNativeTarget "ZeitSucheTests" */;
+			buildPhases = (
+				CBC1916B1D0AF1A6002D2878 /* Sources */,
+				CBC1916C1D0AF1A6002D2878 /* Frameworks */,
+				CBC1916D1D0AF1A6002D2878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBC191711D0AF1A6002D2878 /* PBXTargetDependency */,
+			);
+			name = ZeitSucheTests;
+			productName = ZeitSucheTests;
+			productReference = CBC1916F1D0AF1A6002D2878 /* ZeitSucheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBC191791D0AF1A6002D2878 /* ZeitSucheUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC191891D0AF1A6002D2878 /* Build configuration list for PBXNativeTarget "ZeitSucheUITests" */;
+			buildPhases = (
+				CBC191761D0AF1A6002D2878 /* Sources */,
+				CBC191771D0AF1A6002D2878 /* Frameworks */,
+				CBC191781D0AF1A6002D2878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBC1917C1D0AF1A6002D2878 /* PBXTargetDependency */,
+			);
+			name = ZeitSucheUITests;
+			productName = ZeitSucheUITests;
+			productReference = CBC1917A1D0AF1A6002D2878 /* ZeitSucheUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBC191531D0AF1A6002D2878 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Bodo Schönfeld";
+				TargetAttributes = {
+					CBC1915A1D0AF1A6002D2878 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					CBC1916E1D0AF1A6002D2878 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CBC1915A1D0AF1A6002D2878;
+					};
+					CBC191791D0AF1A6002D2878 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CBC1915A1D0AF1A6002D2878;
+					};
+				};
+			};
+			buildConfigurationList = CBC191561D0AF1A6002D2878 /* Build configuration list for PBXProject "ZeitSuche" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBC191521D0AF1A6002D2878;
+			productRefGroup = CBC1915C1D0AF1A6002D2878 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBC1915A1D0AF1A6002D2878 /* ZeitSuche */,
+				CBC1916E1D0AF1A6002D2878 /* ZeitSucheTests */,
+				CBC191791D0AF1A6002D2878 /* ZeitSucheUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBC191591D0AF1A6002D2878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC191691D0AF1A6002D2878 /* LaunchScreen.storyboard in Resources */,
+				CBC191661D0AF1A6002D2878 /* Assets.xcassets in Resources */,
+				CB75FD171D1C233A00AFD4B2 /* LoadingCell.xib in Resources */,
+				CBA12FB81D1AC14F0010F7B8 /* SearchResultCell.xib in Resources */,
+				CBA12FBC1D1ACA990010F7B8 /* NothingFoundCell.xib in Resources */,
+				CBC191641D0AF1A6002D2878 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC1916D1D0AF1A6002D2878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC191781D0AF1A6002D2878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB57F8D81D1A847100C094F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBC191571D0AF1A6002D2878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC191611D0AF1A6002D2878 /* SearchViewController.swift in Sources */,
+				CB0DFFCE1D20385400DC5970 /* ArticleDate.swift in Sources */,
+				CBC29B1E1D1ED4050039157E /* ArticleViewController.swift in Sources */,
+				CBE198E01D1D59FF00EFAFDB /* DimmingPresentationController.swift in Sources */,
+				CB57F8DA1D1A8ECD00C094F1 /* SearchResult.swift in Sources */,
+				CBEF39CC1D1BD438007851E9 /* Connection.swift in Sources */,
+				CBF000A21D2175DD0039A434 /* MyLabel.swift in Sources */,
+				CBF000A41D2175F20039A434 /* MyButton.swift in Sources */,
+				CB75FD191D1C347700AFD4B2 /* DetailViewController.swift in Sources */,
+				CBA12FBA1D1AC80C0010F7B8 /* SearchResultCell.swift in Sources */,
+				CBC1915F1D0AF1A6002D2878 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC1916B1D0AF1A6002D2878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC191741D0AF1A6002D2878 /* ZeitSucheTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC191761D0AF1A6002D2878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC1917F1D0AF1A6002D2878 /* ZeitSucheUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBC191711D0AF1A6002D2878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBC1915A1D0AF1A6002D2878 /* ZeitSuche */;
+			targetProxy = CBC191701D0AF1A6002D2878 /* PBXContainerItemProxy */;
+		};
+		CBC1917C1D0AF1A6002D2878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBC1915A1D0AF1A6002D2878 /* ZeitSuche */;
+			targetProxy = CBC1917B1D0AF1A6002D2878 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBC191621D0AF1A6002D2878 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC191631D0AF1A6002D2878 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBC191671D0AF1A6002D2878 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC191681D0AF1A6002D2878 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBC191811D0AF1A6002D2878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBC191821D0AF1A6002D2878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBC191841D0AF1A6002D2878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZeitSuche/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.niftycode.ZeitSuche;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBC191851D0AF1A6002D2878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZeitSuche/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.niftycode.ZeitSuche;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CBC191871D0AF1A6002D2878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZeitSucheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.niftycode.ZeitSucheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZeitSuche.app/ZeitSuche";
+			};
+			name = Debug;
+		};
+		CBC191881D0AF1A6002D2878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZeitSucheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.niftycode.ZeitSucheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZeitSuche.app/ZeitSuche";
+			};
+			name = Release;
+		};
+		CBC1918A1D0AF1A6002D2878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZeitSucheUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.niftycode.ZeitSucheUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZeitSuche;
+			};
+			name = Debug;
+		};
+		CBC1918B1D0AF1A6002D2878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZeitSucheUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.niftycode.ZeitSucheUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZeitSuche;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBC191561D0AF1A6002D2878 /* Build configuration list for PBXProject "ZeitSuche" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC191811D0AF1A6002D2878 /* Debug */,
+				CBC191821D0AF1A6002D2878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC191831D0AF1A6002D2878 /* Build configuration list for PBXNativeTarget "ZeitSuche" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC191841D0AF1A6002D2878 /* Debug */,
+				CBC191851D0AF1A6002D2878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC191861D0AF1A6002D2878 /* Build configuration list for PBXNativeTarget "ZeitSucheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC191871D0AF1A6002D2878 /* Debug */,
+				CBC191881D0AF1A6002D2878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC191891D0AF1A6002D2878 /* Build configuration list for PBXNativeTarget "ZeitSucheUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC1918A1D0AF1A6002D2878 /* Debug */,
+				CBC1918B1D0AF1A6002D2878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBC191531D0AF1A6002D2878 /* Project object */;
+}
