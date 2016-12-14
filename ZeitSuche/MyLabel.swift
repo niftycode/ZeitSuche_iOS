@@ -13,16 +13,16 @@ import UIKit
 class MyLabel: UILabel {
     
     // override drawTextInRect to customize UILabel
-    override func drawTextInRect(rect: CGRect) {
+    override func drawText(in rect: CGRect) {
         if let stringText = text {
             let stringTextAsNSString = stringText as NSString
-            let labelStringSize = stringTextAsNSString.boundingRectWithSize(CGSizeMake(CGRectGetWidth(self.frame), CGFloat.max),
-                                                                            options: NSStringDrawingOptions.UsesLineFragmentOrigin,
+            let labelStringSize = stringTextAsNSString.boundingRect(with: CGSize(width: self.frame.width, height: CGFloat.greatestFiniteMagnitude),
+                                                                            options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                                                             attributes: [NSFontAttributeName: font],
                                                                             context: nil).size
-            super.drawTextInRect(CGRectMake(0, 0, CGRectGetWidth(self.frame), ceil(labelStringSize.height)))
+            super.drawText(in: CGRect(x: 0, y: 0, width: self.frame.width, height: ceil(labelStringSize.height)))
         } else {
-            super.drawTextInRect(rect)
+            super.drawText(in: rect)
         }
     }
     
@@ -30,7 +30,7 @@ class MyLabel: UILabel {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         layer.borderWidth = 1
-        layer.borderColor = UIColor.blackColor().CGColor
+        layer.borderColor = UIColor.black.cgColor
     }
  
 

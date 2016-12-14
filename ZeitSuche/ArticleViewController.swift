@@ -21,16 +21,16 @@ class ArticleViewController: UIViewController {
         
         if let searchResult = searchResult {
             let articleURL = searchResult.articleURL
-            let requestURL = NSURL(string:articleURL)
-            let requestObject = NSURLRequest(URL: requestURL!)
+            let requestURL = URL(string:articleURL)
+            let requestObject = URLRequest(url: requestURL!)
             webView.loadRequest(requestObject)
         } else {
             print("___ERROR___")
         }
     }
     
-    @IBAction func closeArticleView(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func closeArticleView(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 
 }

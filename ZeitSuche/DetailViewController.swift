@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        modalPresentationStyle = .Custom
+        modalPresentationStyle = .custom
         transitioningDelegate = self
     }
     
@@ -52,11 +52,11 @@ class DetailViewController: UIViewController {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ShowArticle" {
             
-            let articleViewController = segue.destinationViewController
+            let articleViewController = segue.destination
                 as! ArticleViewController
             
             articleViewController.searchResult = searchResult
@@ -64,29 +64,29 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func close() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
 }
 
 extension DetailViewController: UIViewControllerTransitioningDelegate {
     
-    func presentationControllerForPresentedViewController(
-        presented: UIViewController,
-        presentingViewController presenting: UIViewController,
-                                 sourceViewController source: UIViewController)
+    func presentationController(
+        forPresented presented: UIViewController,
+        presenting: UIViewController?,
+                                 source: UIViewController)
         -> UIPresentationController? {
             return DimmingPresentationController(
                 presentedViewController: presented,
-                presentingViewController: presenting)
+                presenting: presenting)
     }
     
 }
 
 extension DetailViewController: UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer,
-                           shouldReceiveTouch touch: UITouch) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldReceive touch: UITouch) -> Bool {
         return (touch.view === self.view)
     }
     

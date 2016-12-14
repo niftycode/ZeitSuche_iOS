@@ -10,41 +10,43 @@ import Foundation
 
 class Connection {
     
-    static func GETSession(urlString: String, completion:(error: NSError?, data: NSData?) -> Void) {
+    static func GETSession(_ urlString: String, completion:@escaping (_ error: NSError?, _ data: Data?) -> Void) {
         
         struct APIKey {
             static let myDeveloperKey = "--> enter your API key here <--"
         }
         
-        let url = NSURL(string: urlString)
+        let url = URL(string: urlString)
         let authString = APIKey.myDeveloperKey
         
-        let request = NSMutableURLRequest(URL: url!)
-        request.HTTPMethod = "GET"
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
         request.setValue(authString, forHTTPHeaderField: "X-Authorization")
         
         self.serverCommunication(request: request, completion: completion)
         
     }
     
-    static func serverCommunication(request request: NSMutableURLRequest, completion:(error: NSError?, data: NSData?) -> Void) {
+    static func serverCommunication(request: URLRequest,
+                                    completion:@escaping (_ error: NSError?, _ data: Data?) -> Void) {
         
         // ############### Configuration for NSURLSession ###############
         
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let configuration = URLSessionConfiguration.default
         configuration.allowsCellularAccess = true
         
-        let session = NSURLSession(configuration: configuration)
+        let session = URLSession(configuration: configuration)
         
-        let task = session.dataTaskWithRequest(request) {
-            (data, _, error) in
+        let task = session.dataTask(with: request, completionHandler: { (data, _, error) in
+            
             guard let data = data else {
                 // Value requirements  n o t  met, do something
-                print(error); return
+                print(error!.localizedDescription); return
             }
+            
             // Do stuff with data...
-            completion(error: nil, data: data)
-        }
+            completion(nil, data)
+        })
         task.resume()
         
     }

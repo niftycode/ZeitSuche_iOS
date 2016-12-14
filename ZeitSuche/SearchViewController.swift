@@ -38,14 +38,14 @@ class SearchViewController: UIViewController {
         
         // register the cell NIBs
         var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
-        tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
+        tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
         
         cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
-        tableView.registerNib(cellNib,
+        tableView.register(cellNib,
                               forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
         
         cellNib = UINib(nibName: TableViewCellIdentifiers.loadingCell, bundle: nil)
-        tableView.registerNib(cellNib, forCellReuseIdentifier:
+        tableView.register(cellNib, forCellReuseIdentifier:
             TableViewCellIdentifiers.loadingCell)
     }
     
@@ -55,18 +55,18 @@ class SearchViewController: UIViewController {
             title: "Hinweis",
             message:
             "Bei der Suche ist ein Fehler aufgetreten. Bitte versuchen Sie es noch einmal.",
-            preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
     // create the search string
-    func urlWithSearchText(searchText: String) -> String {
+    func urlWithSearchText(_ searchText: String) -> String {
         
         let escapedSearchText =
-            searchText.stringByAddingPercentEncodingWithAllowedCharacters(
-                NSCharacterSet.URLQueryAllowedCharacterSet())
+            searchText.addingPercentEncoding(
+                withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
         let urlString = String(format: "http://api.zeit.de/content?q=title:%@&limit=20", escapedSearchText!)
         
@@ -77,11 +77,11 @@ class SearchViewController: UIViewController {
     }
     
     // parse JSON data
-    func parseJSON(data: NSData) -> [String: AnyObject]? {
+    func parseJSON(_ data: Data) -> [String: AnyObject]? {
         
         do {
-            return try NSJSONSerialization.JSONObjectWithData(
-                data, options: []) as? [String: AnyObject]
+            return try JSONSerialization.jsonObject(
+                with: data, options: []) as? [String: AnyObject]
         } catch {
             print("JSON Error: \(error)")
             return nil
@@ -90,7 +90,7 @@ class SearchViewController: UIViewController {
     }
     
     // parse dictionary
-    func parseDictionary(dictionary: [String: AnyObject]) -> [SearchResult] {
+    func parseDictionary(_ dictionary: [String: AnyObject]) -> [SearchResult] {
         
         guard let array = dictionary["matches"] as? [AnyObject] else {
             print("Expected 'matches' array")
@@ -119,7 +119,7 @@ class SearchViewController: UIViewController {
     }
     
     // parse dictionary content
-    func parseResults(dictionary: [String: AnyObject]) -> SearchResult {
+    func parseResults(_ dictionary: [String: AnyObject]) -> SearchResult {
     
         let searchResult = SearchResult()
         
@@ -147,7 +147,7 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UISearchBarDelegate {
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         if !searchBar.text!.isEmpty {
             
@@ -163,17 +163,17 @@ extension SearchViewController: UISearchBarDelegate {
             
             Connection.GETSession(searchString) { (error, data) in
                 
-                if let data = data, dictionary = self.parseJSON(data) {
+                if let data = data, let dictionary = self.parseJSON(data) {
                     self.searchResults = self.parseDictionary(dictionary)
                     
-                    dispatch_async(dispatch_get_main_queue()) {
+                    DispatchQueue.main.async {
                         self.isLoading = false
                         self.tableView.reloadData()
                     }
                     return
                 }
                 
-                dispatch_async(dispatch_get_main_queue()) {
+                DispatchQueue.main.async {
                     self.hasSearched = false
                     self.isLoading = false
                     self.tableView.reloadData()
@@ -184,8 +184,8 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     // unify the status bar with the search bar
-    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
-        return .TopAttached
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
     }
     
 }
@@ -194,7 +194,7 @@ extension SearchViewController: UISearchBarDelegate {
 // because of not using an UITableViewController.
 extension SearchViewController: UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if isLoading {
             return 1
@@ -208,23 +208,23 @@ extension SearchViewController: UITableViewDataSource {
         
     }
     
-    func tableView(tableView: UITableView,
-                   cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if isLoading {
-            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.loadingCell, forIndexPath:indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.loadingCell, for:indexPath)
             
             let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
             spinner.startAnimating()
             return cell
         } else if searchResults.count == 0 {
-            return tableView.dequeueReusableCellWithIdentifier(
-                TableViewCellIdentifiers.nothingFoundCell,
-                forIndexPath: indexPath)
+            return tableView.dequeueReusableCell(
+                withIdentifier: TableViewCellIdentifiers.nothingFoundCell,
+                for: indexPath)
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier(
-                TableViewCellIdentifiers.searchResultCell,
-                forIndexPath: indexPath) as! SearchResultCell
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: TableViewCellIdentifiers.searchResultCell,
+                for: indexPath) as! SearchResultCell
             let searchResult = searchResults[indexPath.row]
             cell.titleLabel.text = searchResult.title
             cell.dateLabel.text = searchResult.date
@@ -233,14 +233,14 @@ extension SearchViewController: UITableViewDataSource {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ShowDetail" {
             
-            let detailViewController = segue.destinationViewController
+            let detailViewController = segue.destination
                 as! DetailViewController
             
-            let indexPath = sender as! NSIndexPath
+            let indexPath = sender as! IndexPath
             let searchResult = searchResults[indexPath.row]
             
             detailViewController.searchResult = searchResult
@@ -250,12 +250,12 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        performSegueWithIdentifier("ShowDetail", sender: indexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
     }
     
-    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if searchResults.count == 0 {
             return nil
         } else {

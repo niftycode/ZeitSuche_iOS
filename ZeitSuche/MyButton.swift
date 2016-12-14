@@ -12,23 +12,23 @@ import UIKit
 
 class MyButton: UIButton {
 
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         didSet {
-            if (highlighted) {
+            if (isHighlighted) {
                 self.backgroundColor = UIColor(red: 196, green: 39, blue: 91)
             } else {
-                self.backgroundColor = UIColor.clearColor()
+                self.backgroundColor = UIColor.clear
             }
         }
     }
     
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
-        self.layer.borderColor = UIColor(red: 196, green: 39, blue: 91).CGColor
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        self.layer.borderColor = UIColor(red: 196, green: 39, blue: 91).cgColor
         self.layer.borderWidth = 1.0
         self.layer.cornerRadius = 5.0
         self.clipsToBounds = true
-        self.setTitleColor(UIColor(red: 196, green: 39, blue: 91), forState: UIControlState.Normal)
+        self.setTitleColor(UIColor(red: 196, green: 39, blue: 91), for: UIControlState())
     }
 
 }

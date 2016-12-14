@@ -10,15 +10,15 @@ import Foundation
 
 class ArticleDate {
     
-    static func parseDate(date: String) -> String {
+    static func parseDate(_ date: String) -> String {
         
         // unformatted: 2015-11-19T02:04:31Z
         // formatted: 19. November 2015
         
-        let unformattedDateIndex = date.startIndex.advancedBy(10)
-        let unformattedDate = date.substringToIndex(unformattedDateIndex)
+        let unformattedDateIndex = date.characters.index(date.startIndex, offsetBy: 10)
+        let unformattedDate = date.substring(to: unformattedDateIndex)
         
-        var dateArray: [String] = unformattedDate.componentsSeparatedByString("-")
+        var dateArray: [String] = unformattedDate.components(separatedBy: "-")
         
         let month: String = dateArray[1]
         
