@@ -40,11 +40,8 @@ class Connection {
         let task = session.dataTask(with: request, completionHandler: { (data, _, error) in
             
             guard let data = data else {
-                // Value requirements  n o t  met, do something
                 print(error!.localizedDescription); return
             }
-            
-            // Do stuff with data...
             completion(nil, data)
         })
         task.resume()
