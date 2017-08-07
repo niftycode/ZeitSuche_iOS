@@ -12,12 +12,10 @@ class Connection {
     
     static func GETSession(_ urlString: String, completion:@escaping (_ error: NSError?, _ data: Data?) -> Void) {
         
-        struct APIKey {
-            static let myDeveloperKey = "--> enter your API key here <--"
-        }
-        
         let url = URL(string: urlString)
-        let authString = APIKey.myDeveloperKey
+        
+        // Get apiKey from seperate text file "api_key.txt"
+        let authString = ReadData.readDataFromTextFile()
         
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
