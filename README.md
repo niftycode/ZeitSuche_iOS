@@ -6,6 +6,12 @@ This iOS app (iPhone) shows how to use the [**Zeit Online** Content API](http://
 
 To test this app you have to get a developer API key from [Zeit Online](http://developer.zeit.de/index). Enter this key in ***api_key.txt***. 
 
+## Requirements
+
+* iOS 10.3+
+* Xcode 9
+* Swift 4 
+
 ## Changelog
 
 * 14/12/2016 - Migration to Swift 3
