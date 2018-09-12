@@ -2,7 +2,7 @@
 
 *Version 1.4.0 - September 12, 2018*
 
-This iOS app (iPhone) shows how to use the [**Zeit Online** Content API](http://developer.zeit.de/index/) with Swift 3. 
+This iOS app (iPhone) shows how to use the [**Zeit Online** Content API](http://developer.zeit.de/index/) with Swift 4. 
 
 To test this app you have to get a developer API key from [Zeit Online](http://developer.zeit.de/index). Enter this key in ***api_key.txt***. 
 
