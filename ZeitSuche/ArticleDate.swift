@@ -15,7 +15,7 @@ class ArticleDate {
         // unformatted: 2015-11-19T02:04:31Z
         // formatted: 19. November 2015
         
-        let unformattedDateIndex = date.characters.index(date.startIndex, offsetBy: 10)
+        let unformattedDateIndex = date.index(date.startIndex, offsetBy: 10)
         let unformattedDate = date[..<unformattedDateIndex]
         // Swift 3:
         //let unformattedDate = date.substring(to: unformattedDateIndex)
