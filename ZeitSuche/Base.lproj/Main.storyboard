@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +29,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Enter a search string" translatesAutoresizingMaskIntoConstraints="NO" id="tBO-7F-0KI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3r8-cx-HB5"/>
@@ -72,12 +70,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yut-fi-cuj" userLabel="Pop-up View">
-                                <rect key="frame" x="31" y="156" width="312" height="367"/>
+                                <rect key="frame" x="31" y="156" width="313" height="367"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supertitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuU-aJ-D9M">
                                         <rect key="frame" x="8" y="60" width="284" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="284" id="Rj8-6y-m7h"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="284" id="Rj8-6y-m7h"/>
                                             <constraint firstAttribute="height" constant="21" id="fQ5-E8-snz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -105,7 +103,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08h-y9-sQj" customClass="MyButton" customModule="ZeitSuche" customModuleProvider="target">
                                         <rect key="frame" x="182" y="8" width="110" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="TVt-A8-Z0F"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="EEV-BT-2EC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Fertig"/>
@@ -128,18 +126,22 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="tuU-aJ-D9M" firstAttribute="leading" secondItem="Yut-fi-cuj" secondAttribute="leadingMargin" id="58z-Ib-wq3"/>
+                                    <constraint firstItem="08h-y9-sQj" firstAttribute="top" secondItem="Yut-fi-cuj" secondAttribute="top" constant="8" id="9MR-IF-KZV"/>
                                     <constraint firstItem="k6V-Bb-eR1" firstAttribute="top" secondItem="tuU-aJ-D9M" secondAttribute="bottom" constant="8" id="CjH-1t-SZN"/>
                                     <constraint firstItem="tuU-aJ-D9M" firstAttribute="leading" secondItem="k6V-Bb-eR1" secondAttribute="leading" id="DdI-sk-WnW"/>
                                     <constraint firstItem="k6V-Bb-eR1" firstAttribute="leading" secondItem="1KG-Vq-rOV" secondAttribute="leading" id="LQR-JL-b7n"/>
                                     <constraint firstItem="1KG-Vq-rOV" firstAttribute="leading" secondItem="1wL-Au-qxN" secondAttribute="leading" id="Mfo-Ag-f5G"/>
+                                    <constraint firstItem="tuU-aJ-D9M" firstAttribute="top" secondItem="08h-y9-sQj" secondAttribute="bottom" constant="8" id="NAk-sL-iq7"/>
+                                    <constraint firstItem="08h-y9-sQj" firstAttribute="trailing" secondItem="tuU-aJ-D9M" secondAttribute="trailing" id="NWr-8q-cdI"/>
                                     <constraint firstItem="1KG-Vq-rOV" firstAttribute="trailing" secondItem="1wL-Au-qxN" secondAttribute="trailing" id="U9U-NX-sID"/>
-                                    <constraint firstItem="08h-y9-sQj" firstAttribute="trailing" secondItem="tuU-aJ-D9M" secondAttribute="trailing" id="WNd-27-hve"/>
+                                    <constraint firstItem="tuU-aJ-D9M" firstAttribute="top" secondItem="08h-y9-sQj" secondAttribute="bottom" constant="8" symbolic="YES" id="WhC-cJ-LB7"/>
                                     <constraint firstAttribute="bottom" secondItem="1wL-Au-qxN" secondAttribute="bottom" constant="20" id="ZFk-5B-owX"/>
-                                    <constraint firstItem="08h-y9-sQj" firstAttribute="top" secondItem="Yut-fi-cuj" secondAttribute="topMargin" id="dJJ-fz-Rhn"/>
+                                    <constraint firstAttribute="trailing" secondItem="08h-y9-sQj" secondAttribute="trailing" constant="21" id="gdM-bj-l8u"/>
+                                    <constraint firstItem="08h-y9-sQj" firstAttribute="top" secondItem="Yut-fi-cuj" secondAttribute="topMargin" id="gtN-fa-Skf"/>
                                     <constraint firstItem="k6V-Bb-eR1" firstAttribute="trailing" secondItem="1KG-Vq-rOV" secondAttribute="trailing" id="iRV-c1-5YK"/>
-                                    <constraint firstItem="tuU-aJ-D9M" firstAttribute="top" secondItem="08h-y9-sQj" secondAttribute="bottom" constant="8" symbolic="YES" id="iyf-bN-knt"/>
                                     <constraint firstItem="tuU-aJ-D9M" firstAttribute="trailing" secondItem="k6V-Bb-eR1" secondAttribute="trailing" id="jbm-zp-eTc"/>
                                     <constraint firstItem="1wL-Au-qxN" firstAttribute="top" secondItem="1KG-Vq-rOV" secondAttribute="bottom" constant="8" id="u0p-CX-hu3"/>
+                                    <constraint firstItem="08h-y9-sQj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yut-fi-cuj" secondAttribute="leading" constant="182" id="xnR-s2-tnB"/>
                                     <constraint firstItem="1KG-Vq-rOV" firstAttribute="top" secondItem="k6V-Bb-eR1" secondAttribute="bottom" constant="8" id="z36-Ss-T29"/>
                                 </constraints>
                             </view>
@@ -204,24 +206,28 @@
                                     <constraint firstItem="7oO-FI-IBe" firstAttribute="trailing" secondItem="9Ma-f9-6o8" secondAttribute="trailingMargin" id="pGu-5J-0r9"/>
                                 </constraints>
                             </view>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjB-Qs-e7R">
-                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
-                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOR-Iq-Mgf">
+                                <rect key="frame" x="16" y="60" width="343" height="607"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kjB-Qs-e7R" firstAttribute="top" secondItem="9Ma-f9-6o8" secondAttribute="bottom" id="4Ss-Q8-4Rw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jOR-Iq-Mgf" secondAttribute="trailing" id="1eU-DF-WmH"/>
                             <constraint firstItem="9Ma-f9-6o8" firstAttribute="leading" secondItem="8fB-VN-Ogh" secondAttribute="leading" id="CxO-bg-lNy"/>
-                            <constraint firstAttribute="trailing" secondItem="kjB-Qs-e7R" secondAttribute="trailing" id="FGl-aZ-1YT"/>
-                            <constraint firstItem="qZ7-3L-N2v" firstAttribute="top" secondItem="kjB-Qs-e7R" secondAttribute="bottom" id="Ggu-9B-kYz"/>
                             <constraint firstAttribute="trailing" secondItem="9Ma-f9-6o8" secondAttribute="trailing" id="MAW-TD-ui4"/>
-                            <constraint firstItem="kjB-Qs-e7R" firstAttribute="leading" secondItem="8fB-VN-Ogh" secondAttribute="leading" id="aGM-k1-TMM"/>
+                            <constraint firstItem="qZ7-3L-N2v" firstAttribute="top" secondItem="jOR-Iq-Mgf" secondAttribute="bottom" id="Rbd-10-L77"/>
+                            <constraint firstItem="jOR-Iq-Mgf" firstAttribute="leading" secondItem="8fB-VN-Ogh" secondAttribute="leadingMargin" id="bmr-cm-mUu"/>
+                            <constraint firstItem="jOR-Iq-Mgf" firstAttribute="top" secondItem="9Ma-f9-6o8" secondAttribute="bottom" id="fYz-cO-11z"/>
                             <constraint firstItem="9Ma-f9-6o8" firstAttribute="top" secondItem="8fB-VN-Ogh" secondAttribute="top" id="s67-tW-pSg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="kjB-Qs-e7R" id="H2W-Ig-msx"/>
+                        <outlet property="webView" destination="jOR-Iq-Mgf" id="WaS-jc-1rb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqD-Mt-V2x" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
 class ArticleViewController: UIViewController {
     
     // IB outlets
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
     
     // Properties
     var searchResult: SearchResult?
@@ -23,7 +24,7 @@ class ArticleViewController: UIViewController {
             let articleURL = searchResult.articleURL
             let requestURL = URL(string:articleURL)
             let requestObject = URLRequest(url: requestURL!)
-            webView.loadRequest(requestObject)
+            webView.load(requestObject)
         } else {
             print("___ERROR___")
         }
